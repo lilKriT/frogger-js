@@ -3,3 +3,34 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.grid {
+  border: 1px solid black;
+  height: 182px;
+  width: 182px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.grid div {
+  height: calc(180px / 9);
+  width: calc(180px / 9);
+}
+
+.ending-block {
+  background-color: red;
+}
+
+.starting-block {
+  background-color: blue;
+}
+
+.log-left,
+.log-right {
+  background-color: lightblue;
+}
+
+.car-left,
+.car-right {
+  background-color: lightgray;
+}
