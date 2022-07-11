@@ -44,6 +44,7 @@ function autoMoveElements() {
   carsRight.forEach((car) => moveCarRight(car));
 
   lose();
+  win();
 }
 
 function moveLogLeft(log) {
@@ -145,6 +146,14 @@ function lose() {
     resultDisplay.textContent = "You lost";
     clearInterval(timerID);
     squares[currentIndex].classList.remove("frog");
+    document.removeEventListener("keyup", moveFrog);
+  }
+}
+
+function win() {
+  if (squares[currentIndex].classList.contains("ending-block")) {
+    resultDisplay.textContent = "You won!";
+    clearInterval(timerID);
     document.removeEventListener("keyup", moveFrog);
   }
 }
